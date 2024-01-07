@@ -83,5 +83,7 @@ Différentes jointures en SQL :
 5.	CROSS JOIN : Retourne le produit cartésien de deux tables, toutes les combinaisons possibles.
 Ces commandes et jointures constituent les bases pour interagir avec les bases de données relationnelles à l'aide du langage SQL.
 
+## Lancement du projet
 
+Suite a cette veille il est temps de mettre en place un serveur MySQL en local et de l'agrémenter de donnée afin de faire nos premières requêtes. Ces requêtes seront présentes dans les scripts SQL rendu en fin de projet.
 
