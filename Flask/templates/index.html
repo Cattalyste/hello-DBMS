@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Castle</title>
+</head>
+<body>
+   <h1>Projet d'analyse de la production de CO2 </h1>
+   <h1>selon le type de production d'électricité choisi par les pays</h1>
+   
+   
+   <p>Au début de ce projet suite a quelques requetes on observe que certains pays 
+   <br>sont très diversifié concernant leurs production d'électricité. 
+   <br>Cocorico la France est bien évidemment classé 1ère pour l'enveloppe nucléaire.
+   <br><br>Ci-dessous vous avec un aperçu des données présente dans la base de donnée.
+   <br>Il est possible de faire la requete pour un pays en particulier ainsi que d'avoir d'autre données dessus</p>
+   
+   <form  method="POST">
+                Consommation annuel du pays :  <input name="conso" />
+				<label for="country">Choose a country : </label>
+                  <select name="Country_selected">
+                    {% for comment1 in query1 %}
+                     <option value={{comment1[0]}}>{{comment1[0]}}</option>
+                    {% endfor %}
+                  </select>
+            <input type="submit" value="Submit">
+	</form>
+	</p>
+   <table>
+    <thead>
+		<tr>
+			<th>{{titre[0]}}</th>
+			<th>{{titre[1]}}</th>
+			<th>{{titre[2]}}</th>
+			<th>{{titre[3]}}</th>
+			<th>{{titre[4]}}</th>
+			<th>{{titre[5]}}</th>
+			<th>{{titre[6]}}</th>
+			<th>{{titre[7]}}</th>
+		</tr>
+    </thead>
+    <tbody>
+        {% for row in query %}
+            <tr>
+                <th>{{row[0]}}</th>
+                <th>{{row[1]}}</th>
+                <th>{{row[2]}}</th>
+                <th>{{row[3]}}</th>
+				<th>{{row[4]}}</th>
+                <th>{{row[5]}}</th>
+                <th>{{row[6]}}</th>
+				<th>{{row[7]}}</th>
+				<th>{{row[8]}}</th>
+            </tr>
+        {% endfor %}
+    </tbody>
+	</table>
+</body>
+</html>
